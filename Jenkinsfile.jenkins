@@ -23,7 +23,7 @@ pipeline {
                     ls -la /usr/local/lib/python2.7/site-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/local/bin/pip*
-                    python -c "import sys.path; print sys.path"
+                    python -c "import sys; print sys.path"
                     python -c "import django; print django.VERSION"
                     python -m pip --version
                     python -m pip list
