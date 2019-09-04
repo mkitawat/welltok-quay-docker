@@ -10,6 +10,7 @@ pipeline {
         stage('Practice1') {
             steps {
                 sh '''
+                    set -o
                     set -e
                     echo $PATH
                     whereis python
@@ -20,9 +21,11 @@ pipeline {
                     ls -la /usr/lib/python3/dist-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/local/lib/python2.7/site-packages
-                    pip list || true
-                    pip show Django || true
-                    pip --version || true
+                    echo --------------------------------------------------------------------
+                    ls -la /usr/local/bin/pip*
+                    echo $(pip list)
+                    echo $(pip show Django)
+                    echo $(pip --version)
                     echo --------------------------------------------------------------------
                 '''
             }
