@@ -4,7 +4,6 @@ pipeline {
             filename 'Dockerfile.jenkins'
             registryUrl 'https://quay.io/repository/'
             registryCredentialsId 'quay-welltok-mkitawat'
-            label 'welltok-pip'
         }
     }
     stages {
