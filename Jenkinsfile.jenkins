@@ -4,6 +4,7 @@ pipeline {
             filename 'Dockerfile.jenkins'
             registryUrl 'https://quay.io/repository/'
             registryCredentialsId 'quay-welltok-mkitawat'
+            label 'welltok-pip'
         }
     }
     stages {
@@ -23,9 +24,19 @@ pipeline {
                     ls -la /usr/local/lib/python2.7/site-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/local/bin/pip*
-                    set +e; pip list
-                    set +e; pip show Django
-                    set +e; pip --version
+                    whoami
+                    if pip --version
+                    then
+                        echo pip version success
+                    if
+                    if pip list
+                    then
+                        echo pip list success
+                    fi
+                    if pip show Django
+                    then
+                        echo pip show success
+                    fi
                     echo --------------------------------------------------------------------
                 '''
             }
