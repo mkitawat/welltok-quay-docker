@@ -15,15 +15,14 @@ pipeline {
                     whereis python
                     whereis pip
                     python --version
-                    pip --version
+                    pip --version || true
                     ls -la /usr/lib/python2.7/dist-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/lib/python3/dist-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/local/lib/python2.7/site-packages
-                    pip list
-                    pip show Django
-                    set +e +x
+                    pip list || true
+                    pip show Django || true
                     echo --------------------------------------------------------------------
                 """
             }
