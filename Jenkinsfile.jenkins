@@ -1,0 +1,19 @@
+pipeline {
+    agent {
+        dockerfile { 
+            filename 'Dockerfile.jenkins'
+            registryUrl 'https://quay.io/repository/'
+            registryCredentialsId 'quay-welltok-mkitawat'
+        }
+    }
+    stages {
+        stage('Practice1') {
+            steps {
+                sh 'python --version'
+                sh 'which python'
+                sh 'ls -la /usr/local/bin/python'
+                sh 'pip show Django'
+            }
+        }
+    }
+}
