@@ -17,8 +17,8 @@ pipeline {
                 sh 'ls -la /usr/lib/python3/dist-packages'
                 sh 'echo --------------------------------------------------------------------'
                 sh 'ls -la /usr/local/lib/python2.7/site-packages'
-                sh 'pip --version'
-                sh 'pip show Django'
+                sh 'pip --version || echo error in pip version'
+                sh 'pip show Django || echo error in pip show'
             }
         }
     }
