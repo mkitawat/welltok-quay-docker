@@ -9,8 +9,10 @@ pipeline {
     stages {
         stage('Practice1') {
             steps {
+                sh 'whereis python'
+                sh 'whereis pip'
                 sh 'python --version'
-                sh 'which python'
+                sh 'pip --version'
                 sh 'ls -la /usr/local/bin/python'
                 sh 'pip show Django'
             }
