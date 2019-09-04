@@ -12,9 +12,9 @@ pipeline {
                 sh 'whereis python'
                 sh 'whereis pip'
                 sh 'python --version'
-                sh 'ls -la /usr/bin/python*'
+                sh 'ls -la /usr/lib/python*'
                 sh 'echo --------------------------------------------------------------------'
-                sh 'ls -la /usr/local/bin/python*'
+                sh 'ls -la /usr/local/lib/python*'
                 sh 'pip --version'
                 sh 'pip show Django'
             }

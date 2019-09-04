@@ -1,9 +1,5 @@
 FROM quay.io/welltok/base-images:python-2.7.16-16.04-latest
 
-RUN whereis python
-
-RUN whereis pip
-
 RUN apt-get update && apt-get install -y python-pip
 
 RUN pip install Django==1.11.20
