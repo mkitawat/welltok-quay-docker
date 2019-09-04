@@ -23,19 +23,11 @@ pipeline {
                     ls -la /usr/local/lib/python2.7/site-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/local/bin/pip*
-                    whoami
-                    if pip --version
-                    then
-                        echo pip version success
-                    fi
-                    if pip list
-                    then
-                        echo pip list success
-                    fi
-                    if pip show Django
-                    then
-                        echo pip show success
-                    fi
+                    python -c "import sys.path; print sys.path"
+                    python -c "import django; print django.VERSION"
+                    python -m pip --version
+                    python -m pip list
+                    python -m pip show Django
                     echo --------------------------------------------------------------------
                 '''
             }
