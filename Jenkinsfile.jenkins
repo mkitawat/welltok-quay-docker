@@ -11,9 +11,11 @@ pipeline {
             steps {
                 sh """
                     set -e -x
+                    echo $PATH
                     whereis python
                     whereis pip
                     python --version
+                    pip --version
                     ls -la /usr/lib/python2.7/dist-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/lib/python3/dist-packages
