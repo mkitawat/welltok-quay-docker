@@ -10,8 +10,8 @@ pipeline {
         stage('Practice1') {
             steps {
                 sh '''
+                    set +e
                     set -o
-                    set -e
                     echo $PATH
                     whereis python
                     whereis pip
@@ -23,9 +23,9 @@ pipeline {
                     ls -la /usr/local/lib/python2.7/site-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/local/bin/pip*
-                    echo $(pip list)
-                    echo $(pip show Django)
-                    echo $(pip --version)
+                    pip list
+                    pip show Django
+                    pip --version
                     echo --------------------------------------------------------------------
                 '''
             }
