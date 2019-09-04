@@ -23,9 +23,9 @@ pipeline {
                     ls -la /usr/local/lib/python2.7/site-packages
                     echo --------------------------------------------------------------------
                     ls -la /usr/local/bin/pip*
-                    pip list
-                    pip show Django
-                    pip --version
+                    set +e; pip list
+                    set +e; pip show Django
+                    set +e; pip --version
                     echo --------------------------------------------------------------------
                 '''
             }
