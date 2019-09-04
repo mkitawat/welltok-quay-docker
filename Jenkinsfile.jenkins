@@ -27,7 +27,7 @@ pipeline {
                     if pip --version
                     then
                         echo pip version success
-                    if
+                    fi
                     if pip list
                     then
                         echo pip list success
